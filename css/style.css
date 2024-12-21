@@ -25,7 +25,7 @@ header {
   padding: 20px 10px;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1;
 }
 
 /* Style for navigational links */
@@ -60,4 +60,4 @@ header .logo img {
     width: auto;
     /* Invert SVG color: https://stackoverflow.com/questions/39761120/invert-svg-image-using-css */
     filter: invert(100%);
-  }
+}

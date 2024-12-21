@@ -6,14 +6,44 @@
 
     <!-- First of the two main parts of an HTML doc. Non-visible info. resides here -->
     <head>
-        <!-- <meta charset="UTF-8">
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-        <title>Website title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Denoising Taxonomy</title>
     </head>
 
     <!-- Secont of the two main parts of an HTML doc. Must be only one body. Contains all visible info. -->
     <body>
+
+        <!-- Container for introductory content or a set of navigational links (e.g. heading elements (<h1> - <h6>), logo, authorship...)-->
+        <header>
+            <!-- div: its purpose is group elements in areas which can be further formatted by CSS -->
+            <!-- class: it is an atribute; all elements can have multiple, each can be manipulated in certain way by JS or CSS -->
+            <div class="main">
+                <div class="logo">
+                    <img src="./assets/logo.svg" alt=""> <!-- alt: provide an alternative description -->
+                </div>    
+                
+                <!-- nav: navigation bar which links to other pages or parts in the page -->
+                <nav>
+
+                    <!-- ul: defines an unordered list o list items (li) -->
+                    <ul> 
+                        <!-- The anchor tag 'a' creates a link to any URL -->
+                        <li><a href="#">Home</a></li> <!-- href="#top" or href="#" links to the current page -->
+                        <li><a href="./pages/papers.html">Papers</a></li> <!-- Link to another page located there -->
+                        <li><a href="./pages/about.html">About</a></li> 
+                        <li>
+                            More <i class="fas fa-caret-down"></i> <!-- An icon from Font Awesome repository -->
+                            <ul class="dropdown">
+                                <li><a href="https://github.com/agarnung/awesome-3d-point-cloud-denoising">3D denoising</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
         <h1 style="color: rgb(235, 47, 47); font-size: 25px; font-family:'Times New Roman', Times, serif">Body text</h1>
     </body>
 

@@ -48,21 +48,34 @@
     
         <!-- Principal content of the taxonomy -->
         <main>
-            <section id="taxonomy">
+            <ul id="taxonomy">
                 <h1>Image Denoising Taxonomy</h1>
-                <div class="tree">
-                    <ul>
-                        <li> 
-                            Group <!-- root node -->
-                            <ul>
-                                <!-- Children nodes -->
-                                <li>a1</li> 
-                                <li>a2</li>
-                            </ul>
-                        </li>
+                <li>
+                    <!-- <span> is very much like a <div> element, but <div> is a block-level element whereas a <span> is an inline-level element -->
+                    <span class="caret">A</span> <!-- root node -->
+                    <ul class="nested">
+                        <!-- Children nodes -->
+                        <li class="item">A1</li>
+                        <li class="item">A2</li>
                     </ul>
-                </div>
-            </section>
+                </li>
+                <li>
+                    <span class="caret">B</span>
+                    <ul class="nested">
+                        <li class="item">B1</li>
+                        <li class="item">B2</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="caret">C</span>
+                    <ul class="nested">
+                        <li class="item">C1</li>
+                        <li class="item">C2</li>
+                    </ul>
+                </li>
+            </ul>
         </main>
+        
     </body>
+
 </html>

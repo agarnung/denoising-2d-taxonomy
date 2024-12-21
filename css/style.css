@@ -88,8 +88,33 @@ header .dropdown {
   min-width: 150px;
 }
 
-/* Dropdown shows when I hover the associated li */
+/* Mostrar el dropdown solo cuando el elemento li es hover */
 header li:hover .dropdown {
   display: block;
 }
+
+/* Show the dropdown only when the li element is hovered */
+header li:hover .dropdown {
+  display: block;
+}
+
+/* Only the main 'a' changes color when hovered over the li */
+header li:hover > a {
+  background-color: #286829;
+  border-radius: 5%;
+}
+
+/* Change the style of 'a' inside the dropdown when hovered over */
+header li:hover .dropdown a:hover {
+  background-color: #286829;
+  border-radius: 5%;
+}
+
+/* Prevent the green border on dropdown links initially */
+header li > .dropdown a {
+  background-color: transparent; /* Don't change the background */
+  border: none; /* Avoid the border */
+}
+
+
 

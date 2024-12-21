@@ -1,5 +1,5 @@
 # image-denoising-taxonomy
-A web dedicated to the taxonomy of 2D image denoising methods
+A web dedicated to the taxonomy of image denoising methods
 
 The web is available from [here](https://agarnung.github.io/image-denoising-taxonomy/)
 

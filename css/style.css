@@ -16,11 +16,42 @@ body {
   background: linear-gradient(135deg, #c9d3e1, #9daec9);
 }
 
+/* Background image only for header, resized */
 header {
   background-image: url("../assets/galaxy.jpg");
   background-size: 100% 100%; 
   border: 0px solid;
   color: #9daec9;
+  padding: 20px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Style for navigational links */
+header .main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+/* Style for the unordered list of nav, in header */
+header nav ul {
+  list-style-type: lower-greek;
+  display: flex;
+  gap: 30px;
+}
+
+/* Style for the anchor elements of nav, in header */
+header nav a {
+  color: rgb(251, 230, 230);
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
 }
 
 /* The 'header' specifier is to better locate it and avoid ambiguities (optional) */

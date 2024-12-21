@@ -25,7 +25,7 @@ header {
   padding: 20px 10px;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: -100;
 }
 
 /* Style for navigational links */
@@ -40,7 +40,7 @@ header .main {
 header nav ul {
   list-style-type: lower-greek;
   display: flex;
-  gap: 30px;
+  gap: 50px;
 }
 
 /* Style for the anchor elements of nav, in header */
@@ -58,4 +58,6 @@ header nav a {
 header .logo img {
     max-height: 50px;
     width: auto;
+    /* Invert SVG color: https://stackoverflow.com/questions/39761120/invert-svg-image-using-css */
+    filter: invert(100%);
   }

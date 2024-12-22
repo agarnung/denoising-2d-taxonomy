@@ -194,4 +194,15 @@ li:hover > .nested {
   display: block;
 }
 
+.caret:hover {
+  background-color: #4caf50;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Animation: when hover nested list items, scales blue */
+.nested li:hover {
+  background-color: #e0f7fa;
+  transform: scale(1.05);
+}
 

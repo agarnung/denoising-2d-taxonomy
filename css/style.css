@@ -162,4 +162,13 @@ main ul {
   transform: scale(1.05);
 }
 
+/* Use an icon from FontAwesome to place a caret befor selecting a list item */
+.caret:before {
+  content: '\f0fe'; /* FontAwesome caret icon */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-right: 10px;
+  color: #4caf50;
+}
+
 

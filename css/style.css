@@ -62,7 +62,6 @@ header nav a {
   transition: color 0.3s ease;
 }
 
-
 /* Positioning policy of list elements in header */
 header li {
   position: relative;
@@ -169,6 +168,30 @@ main ul {
   font-weight: 900;
   margin-right: 10px;
   color: #4caf50;
+}
+
+/* Apply style to nested items */
+.nested li {
+  padding-left: 20px;
+  margin-bottom: 8px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* By default nested iterms are hidden */ 
+.nested {
+  display: none;
+  margin-left: 20px;
+  transition: all 0.3s ease-out;
+}
+
+/* Show the nested items when we hover the parent */
+li:hover > .nested {
+  display: block;
 }
 
 

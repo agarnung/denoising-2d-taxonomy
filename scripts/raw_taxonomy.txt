@@ -1,14 +1,44 @@
 * Spatial Domain
 ** Local
 *** Linear
-**** A
-**** B
+**** Mean
+***** Arithmetic
+***** Geometric
+***** Harmonic
+***** Contraharmonic
+**** Convolution-based
+***** Gaussian
+***** Custom kernels
 *** Non-linear
-**** C
-**** D
+**** Median
+***** WMF
+***** CWMF
+***** DWMF
+***** RWMF
+***** SMF
+***** AMF
+***** AWMF
+**** Total Variation
+**** 4th Order PDE
+**** Anisotropic Diffusion Filtering
+**** Other
+***** Bilateral
+***** Trilateral
+***** Morphoplogical
+***** SUSAN
 ** Non-local
-*** D
-*** E
+*** NLM-based (Non Local Means)
+**** Fast NLM
+**** Blockwise optimized
+**** Fast Unbiased
+**** Dynamic
+**** Enhanced
+**** Adaptive 
+**** DCT/wavelet/contourlet-based NLM
+**** NLMLE, NLLMMSE, NLSBSM...
+*** BM3D
+*** Other
+**** Fuzzy Filter
 * Transform Domain
 ** B1
 ** B2

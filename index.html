@@ -54,67 +54,47 @@
 
     <h1 style="color: rgb(235, 47, 47); font-size: 25px; font-family:'Times New Roman', Times, serif">--- Home ---</h1>
 
-    <!-- TODO insert automatically the tree.html in the main with fetch script -->
     <!-- Main content of the taxonomy -->
-    <main id="taxonomy-container">
-        <!-- El contenido HTML se insertará aquí -->
-        <ul id="taxonomy">
-            <h1>Image Denoising Taxonomy</h1>
-            <li>
-                <!-- <span> is very much like a <div> element, but <div> is a block-level element whereas a <span> is an inline-level element -->
-                <span class="caret">Spatial Domain</span> <!-- root node -->
-                <ul class="nested-caret">
-                    <!-- Children nodes -->
-                    <span class="caret">Local</span> <!-- sub-root node -->
-                    <ul class="nested-caret">
-                        <span class="caret">Linear</span> <!-- sub-root node -->
-                        <ul class="nested">
-                            <li class="item">A</li>
-                            <li class="item">B</li>
-                        </ul>
-                        <span class="caret">Non-linear</span> <!-- sub-root node -->
-                        <ul class="nested">
-                            <li class="item">C</li>
-                            <li class="item">D</li>
-                        </ul>
-                    </ul>
-                    <span class="caret">Non-local</span> <!-- sub-root node -->
-                    <ul class="nested">
-                        <li class="item">D</li>
-                        <li class="item">E</li>
-                    </ul>
-                </ul>
-            </li>
-            <li>
-                <span class="caret">Transform Domain</span>
-                <ul class="nested">
-                    <li class="item">B1</li>
-                    <li class="item">B2</li>
-                </ul>
-            </li>
-            <li>
-                <span class="caret">Statistical Domain</span>
-                <ul class="nested">
-                    <li class="item">C1</li>
-                    <li class="item">C2</li>
-                </ul>
-            </li>
-            <li>
-                <span class="caret">Learning-based</span>
-                <ul class="nested">
-                    <li class="item">C1</li>
-                    <li class="item">C2</li>
-                </ul>
-            </li>
-            <li>
-                <span class="caret">Hybrids, Other Domain</span>
-                <ul class="nested">
-                    <li class="item">C1</li>
-                    <li class="item">C2</li>
-                </ul>
-            </li>
-        </ul>
+    <main>
+        <!-- The content will be inserted here -->
     </main>
+
+    <!-- Insert automatically the tree.html in the main with fetch script -->
+    <script>
+        // Function to load external HTML content dynamically
+        function loadTaxonomyContent() {
+            // Fetch the external HTML file (tree.html) from the specified path
+            fetch('scripts/tree.html') // Provide the correct relative path to your HTML file
+                .then(response => response.text()) // Parse the response as plain text (HTML)
+                .then(data => {
+                    // Once the HTML content is retrieved, insert it into the <main> element
+                    document.querySelector('main').innerHTML = data; // The content is inserted into the <main> tag (can be adjusted to any other element)
+                })
+                .catch(error => {
+                    // Log any error if fetching the content fails (e.g., file not found or network issue)
+                    console.error('Error fetching the taxonomy content:', error);
+                });
+        }
+    
+        // Ensure the content is loaded as soon as the page has finished loading
+        window.onload = loadTaxonomyContent; // Trigger the loadTaxonomyContent function when the page is fully loaded
+    
+        // Event listener for handling clicks on dynamically loaded content
+        document.querySelector('body').addEventListener('click', function (event) {
+            // Check if the clicked element is a "caret" (an expandable item in the taxonomy)
+            if (event.target.classList.contains('caret')) {
+                const nested = event.target.nextElementSibling; // Get the next sibling element (which should be a nested list)
+                
+                // Toggle the display of the nested element (show or hide based on current state)
+                if (nested) {
+                    nested.style.display = nested.style.display === 'block' ? 'none' : 'block';
+                }
+                
+                // Toggle the 'active' class on the caret to change its visual state (e.g., change the icon)
+                event.target.classList.toggle('active');
+            }
+        });
+    </script>
 
     <!-- Link JS scripts -->
     <script src="./js/utils.js"></script>

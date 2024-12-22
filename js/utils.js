@@ -11,3 +11,4 @@ document.querySelectorAll('.caret').forEach(caret => {
     caret.classList.toggle('active');
   });
 });
+

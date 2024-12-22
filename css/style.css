@@ -161,9 +161,18 @@ main ul {
   transform: scale(1.05);
 }
 
-/* Use an icon from FontAwesome to place a caret befor selecting a list item */
+/* Use an icon from FontAwesome to place a caret before selecting a list item */
 .caret:before {
-  content: '\f0fe'; /* FontAwesome caret icon */
+  content: '\f0fe'; /* FontAwesome caret icon (default "+") */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-right: 10px;
+  color: #4caf50;
+}
+
+/* Style for caret when clicked (active state) */
+.caret.active:before {
+  content: '\f068'; /* FontAwesome caret icon (change to "-") */
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   margin-right: 10px;
@@ -187,6 +196,13 @@ main ul {
   border: 1px solid #ddd;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, transform 0.3s;
+}
+
+/* By default nested iterms are hidden */ 
+.nested-caret {
+  display: none;
+  margin-left: 20px;
+  transition: all 0.3s ease-out;
 }
 
 /* By default nested iterms are hidden */ 

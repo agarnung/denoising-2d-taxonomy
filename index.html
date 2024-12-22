@@ -53,29 +53,52 @@
                 <h1>Image Denoising Taxonomy</h1>
                 <li>
                     <!-- <span> is very much like a <div> element, but <div> is a block-level element whereas a <span> is an inline-level element -->
-                    <span class="caret">A</span> <!-- root node -->
-                    <ul class="nested">
+                    <span class="caret">Spatial Domain</span> <!-- root node -->
+                    <ul class="nested-caret">
                         <!-- Children nodes -->
-                        <li class="item">A1</li>
-                        <li class="item">A2</li>
-                        <span class="caret">A3</span> <!-- sub-root node -->
-                        <ul class="nested">
-                            <!-- Sub-children nodes -->
-                            <li class="item">A31</li>
-                            <li class="item">A32</li>
-                        </ul>
-    
+                            <span class="caret">Local</span> <!-- sub-root node -->
+                            <ul class="nested-caret">
+                                <span class="caret">Linear</span> <!-- sub-root node -->
+                                <ul class="nested">
+                                    <li class="item">A</li>
+                                    <li class="item">B</li>
+                                </ul>
+                                <span class="caret">Non-linear</span> <!-- sub-root node -->
+                                <ul class="nested">
+                                    <li class="item">C</li>
+                                    <li class="item">D</li>
+                                </ul>
+                            </ul>
+                            <span class="caret">Non-local</span> <!-- sub-root node -->
+                            <ul class="nested">
+                                <li class="item">D</li>
+                                <li class="item">E</li>
+                            </ul>
                     </ul>
                 </li>
                 <li>
-                    <span class="caret">B</span>
+                    <span class="caret">Transform Domain</span>
                     <ul class="nested">
                         <li class="item">B1</li>
                         <li class="item">B2</li>
                     </ul>
                 </li>
                 <li>
-                    <span class="caret">C</span>
+                    <span class="caret">Statistical Domain</span>
+                    <ul class="nested">
+                        <li class="item">C1</li>
+                        <li class="item">C2</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="caret">Learning-based</span>
+                    <ul class="nested">
+                        <li class="item">C1</li>
+                        <li class="item">C2</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="caret">Hybrids, Other Domain</span>
                     <ul class="nested">
                         <li class="item">C1</li>
                         <li class="item">C2</li>
@@ -83,7 +106,7 @@
                 </li>
             </ul>
         </main>
-
+        
         <!-- Link JS scripts -->
         <script src="./js/utils.js"></script>
 

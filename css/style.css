@@ -170,6 +170,13 @@ main ul {
   color: #4caf50;
 }
 
+/* Change to black when clicked */
+.caret:active {
+  background-color: rgb(40, 87, 41);
+  color: #fff; 
+  transform: scale(1); 
+}
+
 /* Apply style to nested items */
 .nested li {
   padding-left: 20px;
@@ -192,12 +199,6 @@ main ul {
 /* Show the nested items when we hover the parent */
 li:hover > .nested {
   display: block;
-}
-
-.caret:hover {
-  background-color: #4caf50;
-  color: #fff;
-  transform: scale(1.05);
 }
 
 /* Animation: when hover nested list items, scales blue */

@@ -1,0 +1,23 @@
+* Spatial Domain
+** Local
+*** Linear
+**** A
+**** B
+*** Non-linear
+**** C
+**** D
+** Non-local
+*** D
+*** E
+* Transform Domain
+** B1
+** B2
+* Statistical Domain
+** C1
+** C2
+* Learning-based
+** C1
+** C2
+* Hybrids, Other Domain
+** C1
+** C2

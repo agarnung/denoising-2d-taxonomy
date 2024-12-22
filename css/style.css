@@ -212,15 +212,8 @@ main ul {
   transition: all 0.3s ease-out;
 }
 
-/* Show the nested items when we hover the parent */
-li:hover > .nested {
-  display: block;
-}
-
 /* Animation: when hover nested list items, scales blue */
 .nested li:hover {
   background-color: #e0f7fa;
   transform: scale(1.05);
 }
-
-/* When clicking caret, set nested items opened */

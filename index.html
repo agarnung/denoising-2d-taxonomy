@@ -1,115 +1,124 @@
 <!-- HTML template generated in VSCode with html:5 command -->
-<!DOCTYPE html> <!-- all HTML documents must start with this (non-HTML) tag, so the browser knows what type of document to expect -->
+<!DOCTYPE html>
+<!-- all HTML documents must start with this (non-HTML) tag, so the browser knows what type of document to expect -->
 
 <!-- Root of an HTML doc. The container of all oher elements -->
-<html lang="en"> <!-- natural language of the webpage -->
+<html lang="en">
+<!-- natural language of the webpage -->
 
-    <!-- First of the two main parts of an HTML doc. Non-visible info. resides here -->
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- FontAwesome -->
-        <title>Image Denoising Taxonomy</title>
-    </head>
+<!-- First of the two main parts of an HTML doc. Non-visible info. resides here -->
 
-    <!-- Secont of the two main parts of an HTML doc. Must be only one body. Contains all visible info. Order matters -->
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- FontAwesome -->
+    <title>Image Denoising Taxonomy</title>
+</head>
 
-        <!-- Container for introductory content or a set of navigational links (e.g. heading elements (<h1> - <h6>), logo, authorship...)-->
-        <header>
-            <!-- div: its purpose is group elements in areas which can be further formatted by CSS -->
-            <!-- class: it is an atribute; all elements can have multiple, each can be manipulated in certain way by JS or CSS -->
-            <div class="main">
-                <div class="logo">
-                    <img src="./assets/logo.svg" alt="Logo"> <!-- alt: provide an alternative description -->
-                </div>    
-                
-                <!-- nav: navigation bar which links to other pages or parts in the page -->
-                <nav>
-                    <!-- ul: defines an unordered list o list items (li) -->
-                    <ul> 
-                        <!-- The anchor tag 'a' creates a link to any URL -->
-                        <li><a href="#">Home</a></li> <!-- href="#top" or href="#" links to the current page -->
-                        <li><a href="./pages/papers.html">Papers</a></li> <!-- Link to another page located there -->
-                        <li><a href="./pages/about.html">About</a></li> 
-                        <li>
-                            <a href="#">More <i class="fas fa-caret-down"></i></a> <!-- An icon from Font Awesome repository -->
-                            <ul class="dropdown">
-                                <li><a href="https://github.com/agarnung/awesome-3d-point-cloud-denoising">3D denoising</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
+<!-- Secont of the two main parts of an HTML doc. Must be only one body. Contains all visible info. Order matters -->
+
+<body>
+
+    <!-- Container for introductory content or a set of navigational links (e.g. heading elements (<h1> - <h6>), logo, authorship...)-->
+    <header>
+        <!-- div: its purpose is group elements in areas which can be further formatted by CSS -->
+        <!-- class: it is an atribute; all elements can have multiple, each can be manipulated in certain way by JS or CSS -->
+        <div class="main">
+            <div class="logo">
+                <img src="./assets/logo.svg" alt="Logo"> <!-- alt: provide an alternative description -->
             </div>
-        </header>
 
-        <h1 style="color: rgb(235, 47, 47); font-size: 25px; font-family:'Times New Roman', Times, serif">--- Home ---</h1>
-    
-        <!-- Principal content of the taxonomy -->
-        <main>
-            <ul id="taxonomy">
-                <h1>Image Denoising Taxonomy</h1>
-                <li>
-                    <!-- <span> is very much like a <div> element, but <div> is a block-level element whereas a <span> is an inline-level element -->
-                    <span class="caret">Spatial Domain</span> <!-- root node -->
+            <!-- nav: navigation bar which links to other pages or parts in the page -->
+            <nav>
+                <!-- ul: defines an unordered list o list items (li) -->
+                <ul>
+                    <!-- The anchor tag 'a' creates a link to any URL -->
+                    <li><a href="#">Home</a></li> <!-- href="#top" or href="#" links to the current page -->
+                    <li><a href="./pages/papers.html">Papers</a></li> <!-- Link to another page located there -->
+                    <li><a href="./pages/about.html">About</a></li>
+                    <li>
+                        <a href="#">More <i class="fas fa-caret-down"></i></a>
+                        <!-- An icon from Font Awesome repository -->
+                        <ul class="dropdown">
+                            <li><a href="https://github.com/agarnung/awesome-3d-point-cloud-denoising">3D denoising</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <h1 style="color: rgb(235, 47, 47); font-size: 25px; font-family:'Times New Roman', Times, serif">--- Home ---</h1>
+
+    <!-- TODO insert automatically the tree.html in the main with fetch script -->
+    <!-- Main content of the taxonomy -->
+    <main id="taxonomy-container">
+        <!-- El contenido HTML se insertará aquí -->
+        <ul id="taxonomy">
+            <h1>Image Denoising Taxonomy</h1>
+            <li>
+                <!-- <span> is very much like a <div> element, but <div> is a block-level element whereas a <span> is an inline-level element -->
+                <span class="caret">Spatial Domain</span> <!-- root node -->
+                <ul class="nested-caret">
+                    <!-- Children nodes -->
+                    <span class="caret">Local</span> <!-- sub-root node -->
                     <ul class="nested-caret">
-                        <!-- Children nodes -->
-                            <span class="caret">Local</span> <!-- sub-root node -->
-                            <ul class="nested-caret">
-                                <span class="caret">Linear</span> <!-- sub-root node -->
-                                <ul class="nested">
-                                    <li class="item">A</li>
-                                    <li class="item">B</li>
-                                </ul>
-                                <span class="caret">Non-linear</span> <!-- sub-root node -->
-                                <ul class="nested">
-                                    <li class="item">C</li>
-                                    <li class="item">D</li>
-                                </ul>
-                            </ul>
-                            <span class="caret">Non-local</span> <!-- sub-root node -->
-                            <ul class="nested">
-                                <li class="item">D</li>
-                                <li class="item">E</li>
-                            </ul>
+                        <span class="caret">Linear</span> <!-- sub-root node -->
+                        <ul class="nested">
+                            <li class="item">A</li>
+                            <li class="item">B</li>
+                        </ul>
+                        <span class="caret">Non-linear</span> <!-- sub-root node -->
+                        <ul class="nested">
+                            <li class="item">C</li>
+                            <li class="item">D</li>
+                        </ul>
                     </ul>
-                </li>
-                <li>
-                    <span class="caret">Transform Domain</span>
+                    <span class="caret">Non-local</span> <!-- sub-root node -->
                     <ul class="nested">
-                        <li class="item">B1</li>
-                        <li class="item">B2</li>
+                        <li class="item">D</li>
+                        <li class="item">E</li>
                     </ul>
-                </li>
-                <li>
-                    <span class="caret">Statistical Domain</span>
-                    <ul class="nested">
-                        <li class="item">C1</li>
-                        <li class="item">C2</li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="caret">Learning-based</span>
-                    <ul class="nested">
-                        <li class="item">C1</li>
-                        <li class="item">C2</li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="caret">Hybrids, Other Domain</span>
-                    <ul class="nested">
-                        <li class="item">C1</li>
-                        <li class="item">C2</li>
-                    </ul>
-                </li>
-            </ul>
-        </main>
-        
-        <!-- Link JS scripts -->
-        <script src="./js/utils.js"></script>
+                </ul>
+            </li>
+            <li>
+                <span class="caret">Transform Domain</span>
+                <ul class="nested">
+                    <li class="item">B1</li>
+                    <li class="item">B2</li>
+                </ul>
+            </li>
+            <li>
+                <span class="caret">Statistical Domain</span>
+                <ul class="nested">
+                    <li class="item">C1</li>
+                    <li class="item">C2</li>
+                </ul>
+            </li>
+            <li>
+                <span class="caret">Learning-based</span>
+                <ul class="nested">
+                    <li class="item">C1</li>
+                    <li class="item">C2</li>
+                </ul>
+            </li>
+            <li>
+                <span class="caret">Hybrids, Other Domain</span>
+                <ul class="nested">
+                    <li class="item">C1</li>
+                    <li class="item">C2</li>
+                </ul>
+            </li>
+        </ul>
+    </main>
 
-    </body>
+    <!-- Link JS scripts -->
+    <script src="./js/utils.js"></script>
+
+</body>
 
 </html>

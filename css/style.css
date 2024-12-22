@@ -207,3 +207,4 @@ li:hover > .nested {
   transform: scale(1.05);
 }
 
+/* When clicking caret, set nested items opened */

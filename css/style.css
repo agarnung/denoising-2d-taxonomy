@@ -127,6 +127,14 @@ h1 {
   text-align: center;
   color: #333;
   font-size: 36px;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+/* Subtitle of taxonomy section */
+h3 {
+  text-align: center;
+  color: rgb(87, 84, 84);
   margin-bottom: 20px;
   margin-top: 0px;
 }

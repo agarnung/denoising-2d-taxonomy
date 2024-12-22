@@ -61,7 +61,8 @@ def generate_html(input_file, output_file):
     # Comienza la estructura HTML con la raíz de la taxonomía
     html_content = '''
         <ul id="taxonomy">
-            <h1>Image Denoising Taxonomy</h1>'''
+            <h1>Image Denoising Taxonomy</h1>
+            <h3>~ A non-rigorous classification of image denoising methods ~</h3>'''
     
     # Iterar sobre los nodos de la raíz
     for i, node in enumerate(tree):

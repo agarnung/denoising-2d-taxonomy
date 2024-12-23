@@ -40,3 +40,15 @@ function closePopup(popupId = 'popup') {
     const popup = document.getElementById(popupId);
     popup.classList.remove('show');
 }
+
+// Open "More Info" popup
+function openMoreInfo() {
+  const moreInfoPopup = document.getElementById('more-info-popup');
+  moreInfoPopup.classList.add('show');
+}
+
+// Open "Papers" popup
+function openPapers() {
+  const papersPopup = document.getElementById('papers-popup');
+  papersPopup.classList.add('show');
+}

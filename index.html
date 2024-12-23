@@ -66,10 +66,10 @@
         <p id="popup-description">Description of the method goes here.</p>
         <div class="buttons">
             <button onclick="openMoreInfo()">More Info</button>
-            <button onclick="openPapers()">Example</button>
+            <button onclick="openExample('example-popup')">Example</button>
         </div>
     </div>
-        
+
     <!-- Aditional popups -->
     <div id="more-info-popup" class="popup">
         <button class="close-btn" onclick="closePopup('more-info-popup')">X</button>
@@ -77,13 +77,13 @@
         <p>This is additional information about the selected method.</p>
     </div>
 
-    <div id="papers-popup" class="popup">
-        <button class="close-btn" onclick="closePopup('papers-popup')">X</button>
+    <div id="example-popup" class="popup">
+        <button class="close-btn" onclick="closePopup('example-popup')">X</button>
         <h2>Example</h2>
         <p class="centered-text">Here is an example of noisy and filtered image.</p>
         <div class="image-container">
-            <img src="assets/noisyLena.png" alt="Noisy Image" style="width: 300px; height: auto; margin-right: 20px;">
-            <img src="assets/cleanLena.png" alt="Filtered Image" style="width: 300px; height: auto;">
+            <!-- Images will be dynamically inserted here -->
+        </div>
     </div>
 
     <!-- Insert automatically the tree.html in the main with fetch script -->
@@ -102,21 +102,21 @@
                     console.error('Error fetching the taxonomy content:', error);
                 });
         }
-    
+
         // Ensure the content is loaded as soon as the page has finished loading
         window.onload = loadTaxonomyContent; // Trigger the loadTaxonomyContent function when the page is fully loaded
-    
+
         // Event listener for handling clicks on dynamically loaded content
         document.querySelector('body').addEventListener('click', function (event) {
             // Check if the clicked element is a "caret" (an expandable item in the taxonomy)
             if (event.target.classList.contains('caret')) {
                 const nested = event.target.nextElementSibling; // Get the next sibling element (which should be a nested list)
-                
+
                 // Toggle the display of the nested element (show or hide based on current state)
                 if (nested) {
                     nested.style.display = nested.style.display === 'block' ? 'none' : 'block';
                 }
-                
+
                 // Toggle the 'active' class on the caret to change its visual state (e.g., change the icon)
                 event.target.classList.toggle('active');
             }

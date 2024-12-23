@@ -11,9 +11,26 @@
   font-family: 'Roboto', sans-serif;
 }
 
-/* Style to body; could be in the global specifier */
+/* Style for the body with a dynamic animated gradient */
 body {
-  background: linear-gradient(135deg, #c9d3e1, #9daec9);
+  background: linear-gradient(-45deg, #c9d3e1, #9daec9, #83a0c8, #8fb2eb);
+  background-size: 400% 400%; /* Expands the gradient to create movement */
+  animation: gradient 15s ease infinite; /* Makes the animation faster */
+  height: 100vh; /* Ensures it occupies the full height of the screen */
+  margin: 0;
+}
+
+/* Gradient animation to create smooth movement */
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 /* Background image only for header, resized */

@@ -12,7 +12,7 @@ document.querySelectorAll('.caret').forEach(caret => {
   });
 });
 
-// Open principal popup and display information
+// Open popup and display information
 function openPopup(elementId) {
   // Get the popup element
   const popup = document.getElementById('popup');
@@ -29,15 +29,14 @@ function openPopup(elementId) {
       case 'wiener-filter':
           description.textContent = "The Wiener filter is used to reduce noise in an image by estimating the local image variance and smoothing accordingly.";
           break;
-      // Add more cases for other methods as necessary
   }
 
-  // Show the principal popup
+  // Show the main popup
   popup.classList.add('show');
 }
 
-// Close principal popup
+// Close the main popup
 function closePopup(popupId = 'popup') {
-  const popup = document.getElementById(popupId);
-  popup.classList.remove('show');
+    const popup = document.getElementById(popupId);
+    popup.classList.remove('show');
 }

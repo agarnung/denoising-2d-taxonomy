@@ -230,7 +230,50 @@ main ul {
   transition: all 0.3s ease-out;
 }
 
+/* Dsplay block mode: start on a new line and take up the full width available by default */
 .popup.show {
   display: block;
 }
+
+/* Style principal popup close button */
+.popup .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #333;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Change font color when hover principal popup close button */
+.popup .close-btn:hover {
+  color: #ff0000;
+}
+
+/* Set a space and margin between principal popup buttons */
+.popup .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Popup buttons */
+.popup button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+/* Change font color when hover any principal popup buttons */
+.popup button:hover {
+  background-color: #45a049;
+}
+
 

@@ -26,7 +26,8 @@ def parse_tree(input_lines):
 
 def tree_to_html(tree):
     """
-    Recursively generates HTML for the tree structure, marking leaf nodes with the class 'item'.
+    Recursively generates HTML for the tree structure, marking leaf nodes with the class 'item'
+    and adding an id and onclick event to call openPopup.
     """
     html = ""
     for node in tree:
@@ -37,8 +38,9 @@ def tree_to_html(tree):
             html += tree_to_html(node["children"])
             html += '</ul>\n</li>\n'
         else:
-            # Leaf node with 'item' class
-            html += f'<li class="item">{node["label"]}</li>\n'
+            # Leaf node with 'item' class, id and openPopup function
+            identifier = node["label"].replace(" ", "-").lower()  # Convert label to a valid identifier
+            html += f'<li id="{identifier}" class="item" onclick="openPopup(\'{identifier}\')">{node["label"]}</li>\n'
     return html
 
 

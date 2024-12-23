@@ -59,6 +59,17 @@
         <!-- The content will be inserted here -->
     </main>
 
+    <!-- Principal popup -->
+    <div id="popup" class="popup">
+        <button class="close-btn" onclick="closePopup()">X</button>
+        <h2>Method Details</h2>
+        <p id="popup-description">Description of the method goes here.</p>
+        <div class="buttons">
+            <button onclick="openMoreInfo()">More Info</button>
+            <button onclick="openPapers()">Example</button>
+        </div>
+    </div>
+        
     <!-- Insert automatically the tree.html in the main with fetch script -->
     <script>
         // Function to load external HTML content dynamically

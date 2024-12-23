@@ -37,7 +37,7 @@
 </ul>
 </li>
 <li id="total-variation" class="item" onclick="openPopup('total-variation')">Total Variation</li>
-<li id="4th-order-pde" class="item" onclick="openPopup('4th-order-pde')">4th Order PDE</li>
+<li id="4th-&-high-order-pde" class="item" onclick="openPopup('4th-&-high-order-pde')">4th & High-Order PDE</li>
 <li id="anisotropic-diffusion-filtering" class="item" onclick="openPopup('anisotropic-diffusion-filtering')">Anisotropic Diffusion Filtering</li>
 <li><span class="caret">Other</span>
 <ul class="nested">
@@ -77,26 +77,140 @@
 </li>
 <li><span class="caret">Transform Domain</span>
 <ul class="nested">
-<li id="b1" class="item" onclick="openPopup('b1')">B1</li>
-<li id="b2" class="item" onclick="openPopup('b2')">B2</li>
+<li><span class="caret">General Frequency Domain</span>
+<ul class="nested">
+<li id="fourier-transform" class="item" onclick="openPopup('fourier-transform')">Fourier Transform</li>
+<li id="wiener" class="item" onclick="openPopup('wiener')">Wiener</li>
+<li id="homomorphic" class="item" onclick="openPopup('homomorphic')">Homomorphic</li>
+<li id="dct" class="item" onclick="openPopup('dct')">DCT</li>
+<li id="dst" class="item" onclick="openPopup('dst')">DST</li>
+<li id="other-unitary-transforms" class="item" onclick="openPopup('other-unitary-transforms')">Other Unitary Transforms</li>
+</ul>
+</li>
+<li><span class="caret">Multi-scale Geometric Analysis (MGA)</span>
+<ul class="nested">
+<li id="tetrole" class="item" onclick="openPopup('tetrole')">Tetrole</li>
+<li id="curvelet" class="item" onclick="openPopup('curvelet')">Curvelet</li>
+<li id="contourlet" class="item" onclick="openPopup('contourlet')">Contourlet</li>
+<li id="bandelet" class="item" onclick="openPopup('bandelet')">Bandelet</li>
+<li id="wedgelet" class="item" onclick="openPopup('wedgelet')">Wedgelet</li>
+<li id="other-star-lets" class="item" onclick="openPopup('other-star-lets')">Other star-lets</li>
+</ul>
+</li>
+<li><span class="caret">Wavelet Domain</span>
+<ul class="nested">
+<li><span class="caret">Basis Function-based</span>
+<ul class="nested">
+<li id="shift-invariant-wavelets" class="item" onclick="openPopup('shift-invariant-wavelets')">Shift Invariant Wavelets</li>
+<li id="multiwavelets" class="item" onclick="openPopup('multiwavelets')">Multiwavelets</li>
+</ul>
+</li>
+<li><span class="caret">Coefficient-based</span>
+<ul class="nested">
+<li id="linear-filtering-(wiener)" class="item" onclick="openPopup('linear-filtering-(wiener)')">Linear Filtering (Wiener)</li>
+<li><span class="caret">Non-linear Filtering</span>
+<ul class="nested">
+<li id="soft/hard-thresholding" class="item" onclick="openPopup('soft/hard-thresholding')">Soft/hard thresholding</li>
+<li id="adaptive-(visushrink)" class="item" onclick="openPopup('adaptive-(visushrink)')">Adaptive (VISUShrink)</li>
+<li id="non-adaptive-(sureshrink,-bayeshrink,-cross-validation)" class="item" onclick="openPopup('non-adaptive-(sureshrink,-bayeshrink,-cross-validation)')">Non-adaptive (SUREShrink, BayeShrink, Cross Validation)</li>
+<li id="shrinkage-techniques" class="item" onclick="openPopup('shrinkage-techniques')">Shrinkage techniques</li>
+</ul>
+</li>
+<li><span class="caret">Wavelet Coefficient Model</span>
+<ul class="nested">
+<li id="deterministic-modelling-(tree-aproximation)" class="item" onclick="openPopup('deterministic-modelling-(tree-aproximation)')">Deterministic Modelling (tree aproximation)</li>
+<li id="statistical-marginal-modelling-(gmm,-ggd...)" class="item" onclick="openPopup('statistical-marginal-modelling-(gmm,-ggd...)')">Statistical Marginal Modelling (GMM, GGD...)</li>
+<li id="statistical-joint-modelling-(rmf,-hmm...)" class="item" onclick="openPopup('statistical-joint-modelling-(rmf,-hmm...)')">Statistical Joint Modelling (RMF, HMM...)</li>
+</ul>
+</li>
+<li><span class="caret">Other</span>
+<ul class="nested">
+<li id="wavelet-packet-analysis" class="item" onclick="openPopup('wavelet-packet-analysis')">Wavelet packet analysis</li>
+<li id="adaptive-multiscale-product" class="item" onclick="openPopup('adaptive-multiscale-product')">Adaptive Multiscale Product</li>
+<li id="thresholding" class="item" onclick="openPopup('thresholding')">Thresholding</li>
+<li id="undecimated-wavelet" class="item" onclick="openPopup('undecimated-wavelet')">Undecimated Wavelet</li>
+<li id="non-orthogonal-wt" class="item" onclick="openPopup('non-orthogonal-wt')">Non-Orthogonal WT</li>
+<li id="more-(udwt,-siwpd,-multiwavelets)" class="item" onclick="openPopup('more-(udwt,-siwpd,-multiwavelets)')">More (UDWT, SIWPD, Multiwavelets)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><span class="caret">Statistical Domain</span>
 <ul class="nested">
-<li id="c1" class="item" onclick="openPopup('c1')">C1</li>
-<li id="c2" class="item" onclick="openPopup('c2')">C2</li>
+<li><span class="caret">Bayesian</span>
+<ul class="nested">
+<li id="ml-estimator" class="item" onclick="openPopup('ml-estimator')">Ml Estimator</li>
+<li id="map-estimator" class="item" onclick="openPopup('map-estimator')">MAP Estimator</li>
+</ul>
+</li>
+<li><span class="caret">Other</span>
+<ul class="nested">
+<li id="kalman-filter" class="item" onclick="openPopup('kalman-filter')">Kalman Filter</li>
+<li id="linear-minimum-mse-estimator" class="item" onclick="openPopup('linear-minimum-mse-estimator')">Linear Minimum MSE Estimator</li>
+<li id="phase-error-estimator" class="item" onclick="openPopup('phase-error-estimator')">Phase Error Estimator</li>
+<li id="non-parametric-estimator" class="item" onclick="openPopup('non-parametric-estimator')">Non-parametric Estimator</li>
+<li id="singularity-function-analysis" class="item" onclick="openPopup('singularity-function-analysis')">Singularity Function Analysis</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><span class="caret">Learning-based</span>
 <ul class="nested">
-<li id="c1" class="item" onclick="openPopup('c1')">C1</li>
-<li id="c2" class="item" onclick="openPopup('c2')">C2</li>
+<li><span class="caret">CNN</span>
+<ul class="nested">
+<li><span class="caret">Specific Image</span>
+<ul class="nested">
+<li id="adnet" class="item" onclick="openPopup('adnet')">ADNet</li>
+<li id="netnet" class="item" onclick="openPopup('netnet')">NETNet</li>
+<li id="pcldcnet" class="item" onclick="openPopup('pcldcnet')">PCLDCNet</li>
+<li id="sanet" class="item" onclick="openPopup('sanet')">SANet</li>
+<li id="drcnn" class="item" onclick="openPopup('drcnn')">DRCNN</li>
+<li id="degan" class="item" onclick="openPopup('degan')">DeGAN</li>
+<li id="dictionary-learning-model" class="item" onclick="openPopup('dictionary-learning-model')">Dictionary Learning Model</li>
+<li id="hierarchical-residual-learning" class="item" onclick="openPopup('hierarchical-residual-learning')">Hierarchical Residual Learning</li>
+<li id="classifier/reconstruction-cnn" class="item" onclick="openPopup('classifier/reconstruction-cnn')">Classifier/Reconstruction CNN</li>
+<li id="detection/reconstructoin-cnn" class="item" onclick="openPopup('detection/reconstructoin-cnn')">Detection/Reconstructoin CNN</li>
+<li id="cnn-vm" class="item" onclick="openPopup('cnn-vm')">CNN-VM</li>
+<li id="cdnet" class="item" onclick="openPopup('cdnet')">CDNet</li>
+<li id="bdmf" class="item" onclick="openPopup('bdmf')">BDMF</li>
+<li id="mp-dcnn" class="item" onclick="openPopup('mp-dcnn')">MP-DCNN</li>
+<li id="sw-cnn" class="item" onclick="openPopup('sw-cnn')">SW-CNN</li>
+</ul>
+</li>
+<li><span class="caret">Specific Image ?</span>
+<ul class="nested">
+<li id="feedfoward-cnn" class="item" onclick="openPopup('feedfoward-cnn')">Feedfoward CNN</li>
+<li id="unet-&-noise2noise" class="item" onclick="openPopup('unet-&-noise2noise')">UNet & Noise2Noise</li>
+<li id="ssdrn" class="item" onclick="openPopup('ssdrn')">SSDRN</li>
+<li id="patch-group-dl" class="item" onclick="openPopup('patch-group-dl')">Patch Group DL</li>
+<li id="ddanet" class="item" onclick="openPopup('ddanet')">DDANet</li>
+<li id="dssbpnet" class="item" onclick="openPopup('dssbpnet')">DSSBPNet</li>
+<li id="semd" class="item" onclick="openPopup('semd')">SEMD</li>
+<li id="udnnet" class="item" onclick="openPopup('udnnet')">UDnNet</li>
+<li id="two-stage-cascaded-residual" class="item" onclick="openPopup('two-stage-cascaded-residual')">Two-stage cascaded residual</li>
+<li id="bf,-df-mff,-cnn" class="item" onclick="openPopup('bf,-df-mff,-cnn')">BF, DF-MFF, CNN</li>
+<li id="hybrid-cnn" class="item" onclick="openPopup('hybrid-cnn')">Hybrid CNN</li>
+<li id="pre-trained-rln" class="item" onclick="openPopup('pre-trained-rln')">Pre-trained RLN</li>
+<li id="cgan" class="item" onclick="openPopup('cgan')">CGAN</li>
+<li id="pnls" class="item" onclick="openPopup('pnls')">PNLS</li>
+<li id="cnn-dmri" class="item" onclick="openPopup('cnn-dmri')">CNN-DMRI</li>
+</ul>
+</li>
+</ul>
+</li>
+<li id="gan" class="item" onclick="openPopup('gan')">GAN</li>
+<li id="autoencoders" class="item" onclick="openPopup('autoencoders')">Autoencoders</li>
+<li id="deep-residual-networks" class="item" onclick="openPopup('deep-residual-networks')">Deep Residual Networks</li>
 </ul>
 </li>
 <li><span class="caret">Hybrids, Other Domain</span>
 <ul class="nested">
-<li id="c1" class="item" onclick="openPopup('c1')">C1</li>
-<li id="c2" class="item" onclick="openPopup('c2')">C2</li>
+<li id="data-adaptive" class="item" onclick="openPopup('data-adaptive')">Data Adaptive</li>
+<li id="transform-(ica)" class="item" onclick="openPopup('transform-(ica)')">Transform (ICA)</li>
 </ul>
 </li>
 

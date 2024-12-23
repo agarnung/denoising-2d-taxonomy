@@ -19,7 +19,7 @@
 ***** AMF
 ***** AWMF
 **** Total Variation
-**** 4th Order PDE
+**** 4th & High-Order PDE
 **** Anisotropic Diffusion Filtering
 **** Other
 ***** Bilateral
@@ -40,14 +40,89 @@
 *** Other
 **** Fuzzy Filter
 * Transform Domain
-** B1
-** B2
+** General Frequency Domain
+*** Fourier Transform
+*** Wiener
+*** Homomorphic
+*** DCT
+*** DST
+*** Other Unitary Transforms
+** Multi-scale Geometric Analysis (MGA)
+*** Tetrole
+*** Curvelet
+*** Contourlet
+*** Bandelet
+*** Wedgelet
+*** Other star-lets
+** Wavelet Domain
+*** Basis Function-based
+**** Shift Invariant Wavelets
+**** Multiwavelets
+*** Coefficient-based
+**** Linear Filtering (Wiener)
+**** Non-linear Filtering 
+***** Soft/hard thresholding
+***** Adaptive (VISUShrink)
+***** Non-adaptive (SUREShrink, BayeShrink, Cross Validation)
+***** Shrinkage techniques 
+**** Wavelet Coefficient Model
+***** Deterministic Modelling (tree aproximation)
+***** Statistical Marginal Modelling (GMM, GGD...)
+***** Statistical Joint Modelling (RMF, HMM...)
+**** Other
+***** Wavelet packet analysis
+***** Adaptive Multiscale Product
+***** Thresholding
+***** Undecimated Wavelet
+***** Non-Orthogonal WT
+***** More (UDWT, SIWPD, Multiwavelets)
 * Statistical Domain
-** C1
-** C2
+** Bayesian
+*** Ml Estimator
+*** MAP Estimator
+** Other
+*** Kalman Filter
+*** Linear Minimum MSE Estimator
+*** Phase Error Estimator
+*** Non-parametric Estimator
+*** Singularity Function Analysis
 * Learning-based
-** C1
-** C2
+** CNN
+*** Specific Image
+**** ADNet
+**** NETNet
+**** PCLDCNet
+**** SANet
+**** DRCNN
+**** DeGAN
+**** Dictionary Learning Model
+**** Hierarchical Residual Learning
+**** Classifier/Reconstruction CNN
+**** Detection/Reconstructoin CNN
+**** CNN-VM
+**** CDNet
+**** BDMF
+**** MP-DCNN
+**** SW-CNN
+*** Specific Image ?
+**** Feedfoward CNN
+**** UNet & Noise2Noise
+**** SSDRN
+**** Patch Group DL
+**** DDANet
+**** DSSBPNet
+**** SEMD
+**** UDnNet
+**** Two-stage cascaded residual
+**** BF, DF-MFF, CNN
+**** Hybrid CNN
+**** Pre-trained RLN
+**** CGAN
+**** PNLS
+**** CNN-DMRI
+** GAN
+** Autoencoders
+** Deep Residual Networks
 * Hybrids, Other Domain
-** C1
-** C2
+** Data Adaptive
+** Transform (ICA)

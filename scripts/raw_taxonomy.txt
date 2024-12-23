@@ -48,7 +48,7 @@
 *** DST
 *** Other Unitary Transforms
 ** Multi-scale Geometric Analysis (MGA)
-*** Tetrole
+*** Tetrolet
 *** Curvelet
 *** Contourlet
 *** Bandelet

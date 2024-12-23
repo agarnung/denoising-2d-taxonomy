@@ -226,8 +226,10 @@ main ul {
   z-index: 200;
   max-width: 90vw;
   max-height: 70vh;
-  overflow: auto;
+  width: auto;
+  overflow: auto; /* ensures content doesn't overflow */
   transition: all 0.3s ease-out;
+  margin: auto;
 }
 
 /* Dsplay block mode: start on a new line and take up the full width available by default */
@@ -276,4 +278,16 @@ main ul {
   background-color: #45a049;
 }
 
+/* Container for popoups images */
+.image-container {
+  display: flex;
+  gap: 5px; /* Space between images */
+}
 
+/* Text of the images popup */
+.centered-text {
+  text-align: center;
+  margin-top: 5px; 
+  margin-bottom: 10px; 
+  font-size: 15px;
+}

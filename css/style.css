@@ -206,6 +206,6 @@ main ul {
 
 /* Hover effect for leaf nodes */
 .item:hover {
-  background-color: #d3e0f5;
+  background-color: #e0f7fa;
   transform: scale(1.05);
 }

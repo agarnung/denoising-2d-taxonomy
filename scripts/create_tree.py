@@ -1,91 +1,73 @@
 def parse_tree(input_lines):
+    """
+    Parses indented lines (using asterisks) into a nested tree structure.
+    """
     tree = []
-    stack = [(-1, tree)]  # Stack to track hierarchy levels
+    stack = [(-1, tree)]  # (level, children)
 
     for line in input_lines:
-        indent_level = line.count('*') - 1  # Número de asteriscos indica el nivel
+        level = line.count('*') - 1  # Asterisk count determines depth
         label = line.strip('* ').strip()
 
         node = {"label": label, "children": []}
-        
-        while stack and stack[-1][0] >= indent_level:
+
+        # Adjust the stack to match the current level
+        while stack and stack[-1][0] >= level:
             stack.pop()
 
+        # Add node to its parent's children
         stack[-1][1].append(node)
-        stack.append((indent_level, node["children"]))
+
+        # Push current node to the stack
+        stack.append((level, node["children"]))
 
     return tree
 
-def tree_to_html(tree, is_last=False):
+
+def tree_to_html(tree):
+    """
+    Recursively generates HTML for the tree structure, marking leaf nodes with the class 'item'.
+    """
     html = ""
-
-    for i, node in enumerate(tree):
-        # Determinar si este nodo es el último hijo en su nivel
-        is_last_child = (i == len(tree) - 1)
-
+    for node in tree:
         if node["children"]:
-            # Si el nodo tiene hijos, usar nested-caret a menos que sea el último
-            if is_last_child:
-                html += f'  <li>\n    <span class="caret">{node["label"]}</span>\n'
-                html += f'    <ul class="nested">\n'  # Usar nested para el último nodo
-            else:
-                html += f'  <li>\n    <span class="caret">{node["label"]}</span>\n'
-                html += f'    <ul class="nested-caret">\n'  # Usar nested-caret para los nodos intermedios
-            html += tree_to_html(node["children"], is_last_child)  # Recursivamente generar los hijos
-            html += f'    </ul>\n'  # Finalizar nested o nested-caret
-            html += f'  </li>\n'
+            # Node with children
+            html += f'<li><span class="caret">{node["label"]}</span>\n'
+            html += '<ul class="nested">\n'
+            html += tree_to_html(node["children"])
+            html += '</ul>\n</li>\n'
         else:
-            # Para nodos hoja, usaremos la clase item y contenedor nested
-            html += f'    <li class="item">{node["label"]}</li>\n'  # Nodos hoja
-
+            # Leaf node with 'item' class
+            html += f'<li class="item">{node["label"]}</li>\n'
     return html
 
-def fix_nested_caret_in_html(html_content):
-    # Recorre el HTML generado y corrige los nested-caret por nested si el siguiente nodo es un item
-    html_lines = html_content.splitlines()
-    corrected_html = []
-    for i, line in enumerate(html_lines):
-        # Si el contenedor es nested-caret y el siguiente nodo es item, cambiamos nested-caret por nested
-        if '<ul class="nested-caret">' in line and i + 1 < len(html_lines) and '<li class="item">' in html_lines[i + 1]:
-            corrected_html.append(line.replace('nested-caret', 'nested'))
-        else:
-            corrected_html.append(line)
-    return "\n".join(corrected_html)
 
-def generate_html(input_file, output_file):
+def generate_main_content(input_file, output_file):
+    """
+    Reads a structured text file, parses it into a tree, and writes the HTML for the <main> section to an output file.
+    """
     with open(input_file, 'r') as file:
         lines = file.readlines()
 
     tree = parse_tree(lines)
-    
-    # Comienza la estructura HTML con la raíz de la taxonomía
+
+    # Build the HTML structure for the taxonomy
     html_content = '''
-        <ul id="taxonomy">
-            <h1>Image Denoising Taxonomy</h1>
-            <h3>~ A non-rigorous classification of image denoising methods ~</h3>'''
-    
-    # Iterar sobre los nodos de la raíz
-    for i, node in enumerate(tree):
-        if node["children"]:
-            html_content += f'  <li>\n    <span class="caret">{node["label"]}</span>\n'
-            html_content += f'    <ul class="nested-caret">\n'  # Usar nested-caret para nodos padre
-            html_content += tree_to_html(node["children"], is_last=False)  # Generar recursivamente los hijos
-            html_content += f'    </ul>\n'  # Finalizar nested-caret
-            html_content += f'  </li>\n'
-        else:
-            html_content += f'    <li class="item">{node["label"]}</li>\n'
-
+<ul id="taxonomy">
+    <h1>Image Denoising Taxonomy</h1>
+    <h3>~ A non-rigorous classification of image denoising methods ~</h3>
+'''
+    html_content += tree_to_html(tree)
     html_content += '''
-        </ul>
-    '''
-
-    # Ahora corregimos los nested-caret por nested donde sea necesario
-    corrected_html_content = fix_nested_caret_in_html(html_content)
+</ul>
+'''
 
     with open(output_file, 'w') as file:
-        file.write(corrected_html_content)
+        file.write(html_content.strip())
+
 
 if __name__ == "__main__":
     input_file = 'raw_taxonomy.txt'
     output_file = 'tree.html'
-    generate_html(input_file, output_file)
+    generate_main_content(input_file, output_file)
+    print(f"HTML content written to {output_file}")

@@ -1,119 +1,103 @@
+<ul id="taxonomy">
+    <h1>Image Denoising Taxonomy</h1>
+    <h3>~ A non-rigorous classification of image denoising methods ~</h3>
+<li><span class="caret">Spatial Domain</span>
+<ul class="nested">
+<li><span class="caret">Local</span>
+<ul class="nested">
+<li><span class="caret">Linear</span>
+<ul class="nested">
+<li><span class="caret">Mean</span>
+<ul class="nested">
+<li class="item">Arithmetic</li>
+<li class="item">Geometric</li>
+<li class="item">Harmonic</li>
+<li class="item">Contraharmonic</li>
+</ul>
+</li>
+<li><span class="caret">Convolution-based</span>
+<ul class="nested">
+<li class="item">Gaussian</li>
+<li class="item">Custom kernels</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="caret">Non-linear</span>
+<ul class="nested">
+<li><span class="caret">Median</span>
+<ul class="nested">
+<li class="item">WMF</li>
+<li class="item">CWMF</li>
+<li class="item">DWMF</li>
+<li class="item">RWMF</li>
+<li class="item">SMF</li>
+<li class="item">AMF</li>
+<li class="item">AWMF</li>
+</ul>
+</li>
+<li class="item">Total Variation</li>
+<li class="item">4th Order PDE</li>
+<li class="item">Anisotropic Diffusion Filtering</li>
+<li><span class="caret">Other</span>
+<ul class="nested">
+<li class="item">Bilateral</li>
+<li class="item">Trilateral</li>
+<li class="item">Morphoplogical</li>
+<li class="item">SUSAN</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="caret">Non-local</span>
+<ul class="nested">
+<li><span class="caret">NLM-based (Non Local Means)</span>
+<ul class="nested">
+<li class="item">Fast NLM</li>
+<li class="item">Blockwise optimized</li>
+<li class="item">Fast Unbiased</li>
+<li class="item">Dynamic</li>
+<li class="item">Enhanced</li>
+<li class="item">Adaptive</li>
+<li class="item">DCT/wavelet/contourlet-based NLM</li>
+<li class="item">NLMLE, NLLMMSE, NLSBSM...</li>
+</ul>
+</li>
+<li class="item">BM3D</li>
+<li><span class="caret">Other</span>
+<ul class="nested">
+<li class="item">Fuzzy Filter</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="caret">Transform Domain</span>
+<ul class="nested">
+<li class="item">B1</li>
+<li class="item">B2</li>
+</ul>
+</li>
+<li><span class="caret">Statistical Domain</span>
+<ul class="nested">
+<li class="item">C1</li>
+<li class="item">C2</li>
+</ul>
+</li>
+<li><span class="caret">Learning-based</span>
+<ul class="nested">
+<li class="item">C1</li>
+<li class="item">C2</li>
+</ul>
+</li>
+<li><span class="caret">Hybrids, Other Domain</span>
+<ul class="nested">
+<li class="item">C1</li>
+<li class="item">C2</li>
+</ul>
+</li>
 
-        <ul id="taxonomy">
-            <h1>Image Denoising Taxonomy</h1>
-            <h3>~ A non-rigorous classification of image denoising methods ~</h3>  <li>
-    <span class="caret">Spatial Domain</span>
-    <ul class="nested-caret">
-  <li>
-    <span class="caret">Local</span>
-    <ul class="nested-caret">
-  <li>
-    <span class="caret">Linear</span>
-    <ul class="nested-caret">
-  <li>
-    <span class="caret">Mean</span>
-    <ul class="nested">
-    <li class="item">Arithmetic</li>
-    <li class="item">Geometric</li>
-    <li class="item">Harmonic</li>
-    <li class="item">Contraharmonic</li>
-    </ul>
-  </li>
-  <li>
-    <span class="caret">Convolution-based</span>
-    <ul class="nested">
-    <li class="item">Gaussian</li>
-    <li class="item">Custom kernels</li>
-    </ul>
-  </li>
-    </ul>
-  </li>
-  <li>
-    <span class="caret">Non-linear</span>
-    <ul class="nested">
-  <li>
-    <span class="caret">Median</span>
-    <ul class="nested">
-    <li class="item">WMF</li>
-    <li class="item">CWMF</li>
-    <li class="item">DWMF</li>
-    <li class="item">RWMF</li>
-    <li class="item">SMF</li>
-    <li class="item">AMF</li>
-    <li class="item">AWMF</li>
-    </ul>
-  </li>
-    <li class="item">Total Variation</li>
-    <li class="item">4th Order PDE</li>
-    <li class="item">Anisotropic Diffusion Filtering</li>
-  <li>
-    <span class="caret">Other</span>
-    <ul class="nested">
-    <li class="item">Bilateral</li>
-    <li class="item">Trilateral</li>
-    <li class="item">Morphoplogical</li>
-    <li class="item">SUSAN</li>
-    </ul>
-  </li>
-    </ul>
-  </li>
-    </ul>
-  </li>
-  <li>
-    <span class="caret">Non-local</span>
-    <ul class="nested">
-  <li>
-    <span class="caret">NLM-based (Non Local Means)</span>
-    <ul class="nested">
-    <li class="item">Fast NLM</li>
-    <li class="item">Blockwise optimized</li>
-    <li class="item">Fast Unbiased</li>
-    <li class="item">Dynamic</li>
-    <li class="item">Enhanced</li>
-    <li class="item">Adaptive</li>
-    <li class="item">DCT/wavelet/contourlet-based NLM</li>
-    <li class="item">NLMLE, NLLMMSE, NLSBSM...</li>
-    </ul>
-  </li>
-    <li class="item">BM3D</li>
-  <li>
-    <span class="caret">Other</span>
-    <ul class="nested">
-    <li class="item">Fuzzy Filter</li>
-    </ul>
-  </li>
-    </ul>
-  </li>
-    </ul>
-  </li>
-  <li>
-    <span class="caret">Transform Domain</span>
-    <ul class="nested">
-    <li class="item">B1</li>
-    <li class="item">B2</li>
-    </ul>
-  </li>
-  <li>
-    <span class="caret">Statistical Domain</span>
-    <ul class="nested">
-    <li class="item">C1</li>
-    <li class="item">C2</li>
-    </ul>
-  </li>
-  <li>
-    <span class="caret">Learning-based</span>
-    <ul class="nested">
-    <li class="item">C1</li>
-    <li class="item">C2</li>
-    </ul>
-  </li>
-  <li>
-    <span class="caret">Hybrids, Other Domain</span>
-    <ul class="nested">
-    <li class="item">C1</li>
-    <li class="item">C2</li>
-    </ul>
-  </li>
-
-        </ul>
-    
+</ul>

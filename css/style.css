@@ -146,7 +146,7 @@ main ul {
   padding-right: 25px;
 }
 
-/* Show nested items on hover */
+/* Style for expandable items with children */
 .caret {
   cursor: pointer;
   user-select: none;
@@ -162,66 +162,50 @@ main ul {
   transition: background-color 0.3s, transform 0.3s;
 }
 
-/* Animation: when hover, the parent item in the tree scales green */
+/* Animation: when hover, scales green */
 .caret:hover {
   background-color: #4caf50;
   color: #fff;
   transform: scale(1.05);
 }
 
-/* Use an icon from FontAwesome to place a caret before selecting a list item */
+/* Icon for caret items */
 .caret:before {
-  content: '\f0fe'; /* FontAwesome caret icon (default "+") */
+  content: '\f0fe'; /* FontAwesome caret icon */
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   margin-right: 10px;
   color: #4caf50;
 }
 
-/* Style for caret when clicked (active state) */
+/* Style for caret when expanded (active) */
 .caret.active:before {
-  content: '\f068'; /* FontAwesome caret icon (change to "-") */
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  margin-right: 10px;
-  color: #4caf50;
+  content: '\f068'; /* FontAwesome "-" icon */
 }
 
-/* Change to black when clicked */
-.caret:active {
-  background-color: rgb(40, 87, 41);
-  color: #fff; 
-  transform: scale(1); 
-}
-
-/* Apply style to nested items */
-.nested li {
-  padding-left: 20px;
-  margin-bottom: 8px;
-  background-color: #f4f4f4;
-  border-radius: 5px;
-  padding: 8px;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-/* By default nested iterms are hidden */ 
-.nested-caret {
-  display: none;
-  margin-left: 20px;
-  transition: all 0.3s ease-out;
-}
-
-/* By default nested iterms are hidden */ 
+/* Style for child items */
 .nested {
   display: none;
   margin-left: 20px;
   transition: all 0.3s ease-out;
 }
 
-/* Animation: when hover nested list items, scales blue */
-.nested li:hover {
-  background-color: #e0f7fa;
+/* Style for leaf nodes (items) */
+.item {
+  padding-left: 20px;
+  margin-bottom: 8px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  color: #333;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effect for leaf nodes */
+.item:hover {
+  background-color: #d3e0f5;
   transform: scale(1.05);
 }
